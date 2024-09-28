@@ -26,7 +26,13 @@ function App() {
                 "Height",
                 "Weight",
               ]}
-              data={[pokemon.name, pokemon.id, pokemon.types, pokemon.height, pokemon.weight]}
+              data={[
+                pokemon.name,
+                pokemon.id,
+                pokemon.types.join(", "),
+                pokemon.height,
+                pokemon.weight,
+              ]}
             />
           </div>
           <h2>Base Stats</h2>

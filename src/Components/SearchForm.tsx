@@ -23,9 +23,9 @@ function SearchForm({ setPokemon, setIsLoading }: IProps) {
         typesArr.push(type.type.name);
       });
 
-      const statsArr: { name: string; stat: number }[] = [];
+      const statsArr: { name: string; stat: string }[] = [];
       data.stats.forEach((stat: { stat: { name: string }; base_stat: number }) => {
-        statsArr.push({ name: stat.stat.name, stat: stat.base_stat });
+        statsArr.push({ name: stat.stat.name, stat: stat.base_stat.toString() });
       });
       console.log(statsArr);
 

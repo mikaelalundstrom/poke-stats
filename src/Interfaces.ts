@@ -1,12 +1,12 @@
 export interface IPokemon {
   name: string;
-  id: number;
+  id: string;
   types: string[];
-  height: number;
-  weight: number;
+  height: string;
+  weight: string;
   stats: {
     name: string;
-    stat: number;
+    stat: string;
   }[];
   img: string;
 }
