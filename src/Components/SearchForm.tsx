@@ -65,10 +65,14 @@ function SearchForm({ setPokemon, setIsLoading, setSearchMsg }: IProps) {
     }
   };
   return (
-    <form onSubmit={handleSearch}>
-      <label htmlFor="searchInput">Search for a pokémon:</label>
-      <input id="searchInput" type="text" placeholder="Name or ID..." required />
-      <button type="submit">Search</button>
+    <form onSubmit={handleSearch} className="search-form">
+      <label htmlFor="searchInput">
+        <h1>Search for a pokémon:</h1>
+      </label>
+      <div>
+        <input id="searchInput" type="text" placeholder="Name or ID..." required />
+        <button type="submit">Search</button>
+      </div>
     </form>
   );
 }
