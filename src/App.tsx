@@ -30,19 +30,19 @@ function App() {
                 pokemon.name,
                 pokemon.id,
                 pokemon.types.join(", "),
-                `${pokemon.height * 0.1}m`,
-                `${pokemon.weight}kg`,
+                `${pokemon.height / 10}m`,
+                `${pokemon.weight / 10}kg`,
               ]}
             />
           </div>
           <h2>Base Stats</h2>
           <Table
-            headings={pokemon.stats.map((stat) => stat.name.replace("-", " "))}
+            headings={pokemon.stats.map((stat) => stat.name.replace("special-", "Sp. "))}
             data={pokemon.stats.map((stat) => stat.stat)}
           />
         </article>
       ) : (
-        <h2>{searchMsg}</h2>
+        <h2 className="search-message">{searchMsg}</h2>
       )}
     </main>
   );

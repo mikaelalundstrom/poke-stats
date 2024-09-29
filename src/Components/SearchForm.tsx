@@ -12,7 +12,7 @@ function SearchForm({ setPokemon, setIsLoading, setSearchMsg }: IProps) {
     e.preventDefault();
     try {
       setIsLoading(true);
-      setSearchMsg("Loading");
+      setSearchMsg("Loading...");
       const form = e.target as HTMLFormElement;
       const searchInput = form.searchInput.value as HTMLInputElement;
 
@@ -26,7 +26,6 @@ function SearchForm({ setPokemon, setIsLoading, setSearchMsg }: IProps) {
         throw new Error("Something went wrong during search");
       } else {
         const data = await response.json();
-        console.log(data);
 
         const typesArr: string[] = [];
         data.types.forEach((type: { type: { name: string } }) => {
@@ -37,7 +36,6 @@ function SearchForm({ setPokemon, setIsLoading, setSearchMsg }: IProps) {
         data.stats.forEach((stat: { stat: { name: string }; base_stat: number }) => {
           statsArr.push({ name: stat.stat.name, stat: stat.base_stat.toString() });
         });
-        console.log(statsArr);
 
         setPokemon({
           name: data.name,
@@ -67,7 +65,7 @@ function SearchForm({ setPokemon, setIsLoading, setSearchMsg }: IProps) {
   return (
     <form onSubmit={handleSearch} className="search-form">
       <label htmlFor="searchInput">
-        <h1>Search for a pokémon:</h1>
+        <h1>Search for a Pokémon:</h1>
       </label>
       <div>
         <input id="searchInput" type="text" placeholder="Name or ID..." required />

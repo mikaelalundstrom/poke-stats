@@ -1,0 +1,25 @@
+table.table {
+  width: 100%;
+  text-align: left;
+  border-style: hidden;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    width: 10%;
+    text-transform: capitalize;
+  }
+
+  th {
+    background-color: #eee;
+    height: 3rem;
+    font-weight: 600;
+  }
+
+  td {
+    background-color: #eee;
+    height: 4rem;
+  }
+}

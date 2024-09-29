@@ -1,6 +1,63 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 5rem;
+  padding: 5rem 1rem;
+  width: 100%;
+
+  .result {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadein-slidein 0.7s;
+
+    div {
+      display: flex;
+      gap: 2rem;
+
+      figure {
+        width: 7rem;
+        height: 7rem;
+        background-color: #eee;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 96px;
+          height: 96px;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-weight: 600;
+    padding-top: 1rem;
+
+    &.search-message {
+      text-align: center;
+    }
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-slidein {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

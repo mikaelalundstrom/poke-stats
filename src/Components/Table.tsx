@@ -5,7 +5,7 @@ interface IProps {
 
 function Table({ headings, data }: IProps) {
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
           {headings.map((heading: string, i: number) => (

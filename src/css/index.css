@@ -3,6 +3,11 @@
 @import "SearchForm.css";
 @import "Table.css";
 
+:root {
+  --primary-color: #ec4e4e;
+  --primary-color-dark: #bb3030;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +15,7 @@
   font-family: "Exo 2", sans-serif;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#root {
+  margin: 0 auto;
+  max-width: 50rem;
 }
