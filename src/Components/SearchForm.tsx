@@ -14,9 +14,11 @@ function SearchForm({ setPokemon, setIsLoading, setSearchMsg }: IProps) {
       setIsLoading(true);
       setSearchMsg("Loading...");
       const form = e.target as HTMLFormElement;
-      const searchInput = form.searchInput.value as HTMLInputElement;
+      const searchInput = form.searchInput as HTMLInputElement;
 
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchInput}`);
+      const response = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${searchInput.value.toLowerCase()}`
+      );
 
       if (!response.ok) {
         if (response.status === 404) {
