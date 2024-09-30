@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchForm from "./Components/SearchForm";
 import { IPokemon } from "./Interfaces";
 import Table from "./Components/Table";
+import ImgPlaceholder from "./Components/ImgPlaceholder";
 
 function App() {
   const [pokemon, setPokemon] = useState<IPokemon | undefined>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [imgLoaded, setImgLoaded] = useState<boolean>(false);
   const [searchMsg, setSearchMsg] = useState<string>("");
+
+  const handleOnLoad = () => {
+    setImgLoaded(true);
+  };
+
+  useEffect(() => {
+    setImgLoaded(false);
+  }, [pokemon]);
 
   return (
     <main>
@@ -16,7 +26,14 @@ function App() {
           <h2>General Info</h2>
           <div>
             <figure>
-              <img src={pokemon.img} alt="Name" />
+              {!imgLoaded && <ImgPlaceholder />}
+
+              <img
+                src={pokemon.img}
+                alt={pokemon.name}
+                onLoad={handleOnLoad}
+                className={!imgLoaded ? "d-none" : ""}
+              />
             </figure>
             <Table
               headings={[

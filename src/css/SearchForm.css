@@ -39,14 +39,14 @@ form.search-form {
       font-weight: 600;
       cursor: pointer;
       transform: scale(1);
-      transition: all 0.3s;
+      transition: all 0.5s;
 
       @media (max-width: 600px) {
         align-self: center;
       }
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
         background-color: var(--primary-color-dark);
       }
     }

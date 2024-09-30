@@ -23,8 +23,14 @@ table.table {
   td {
     padding: 0.5rem 1rem;
     border: 2px solid white;
+    background-color: #eee;
     width: 10%;
     text-transform: capitalize;
+    transition: 0.3s all;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
 
     @media (max-width: 600px) {
       padding: 0.5rem;
@@ -32,13 +38,11 @@ table.table {
   }
 
   th {
-    background-color: #eee;
     height: 3rem;
     font-weight: 600;
   }
 
   td {
-    background-color: #eee;
     height: 4rem;
     @media (max-width: 600px) {
       height: 3rem;

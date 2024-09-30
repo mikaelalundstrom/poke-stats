@@ -6,6 +6,7 @@
 :root {
   --primary-color: #ec4e4e;
   --primary-color-dark: #bb3030;
+  --color-black: #222222;
 }
 
 * {
@@ -13,6 +14,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Exo 2", sans-serif;
+  color: var(--color-black);
 }
 
 #root {
