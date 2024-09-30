@@ -12,6 +12,10 @@ form.search-form {
     display: flex;
     gap: 2rem;
 
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
     input {
       flex: 1;
       font-size: 1rem;
@@ -36,6 +40,10 @@ form.search-form {
       cursor: pointer;
       transform: scale(1);
       transition: all 0.3s;
+
+      @media (max-width: 600px) {
+        align-self: center;
+      }
 
       &:hover {
         transform: scale(1.1);

@@ -4,12 +4,31 @@ table.table {
   border-style: hidden;
   border-collapse: collapse;
 
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+  }
+
+  &.general {
+    @media (max-width: 600px) {
+      td:nth-child(5),
+      td:nth-child(4),
+      th:nth-child(4),
+      th:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+
   th,
   td {
     padding: 0.5rem 1rem;
     border: 2px solid white;
     width: 10%;
     text-transform: capitalize;
+
+    @media (max-width: 600px) {
+      padding: 0.5rem;
+    }
   }
 
   th {
@@ -21,5 +40,8 @@ table.table {
   td {
     background-color: #eee;
     height: 4rem;
+    @media (max-width: 600px) {
+      height: 3rem;
+    }
   }
 }

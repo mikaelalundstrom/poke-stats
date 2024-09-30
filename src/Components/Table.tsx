@@ -1,11 +1,12 @@
 interface IProps {
   headings: string[];
   data: string[];
+  className: string;
 }
 
-function Table({ headings, data }: IProps) {
+function Table({ headings, data, className }: IProps) {
   return (
-    <table className="table">
+    <table className={`table ${className}`}>
       <thead>
         <tr>
           {headings.map((heading: string, i: number) => (

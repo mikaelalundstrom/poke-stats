@@ -15,9 +15,14 @@ main {
       display: flex;
       gap: 2rem;
 
+      @media (max-width: 600px) {
+        gap: 1rem;
+      }
+
       figure {
-        width: 7rem;
-        height: 7rem;
+        max-width: 7.5rem;
+        max-height: 7.5rem;
+        padding: 0 1rem;
         background-color: #eee;
         aspect-ratio: 1;
         display: flex;

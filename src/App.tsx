@@ -33,12 +33,14 @@ function App() {
                 `${pokemon.height / 10}m`,
                 `${pokemon.weight / 10}kg`,
               ]}
+              className="general"
             />
           </div>
           <h2>Base Stats</h2>
           <Table
             headings={pokemon.stats.map((stat) => stat.name.replace("special-", "Sp. "))}
             data={pokemon.stats.map((stat) => stat.stat)}
+            className="stats"
           />
         </article>
       ) : (
